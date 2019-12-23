@@ -12,10 +12,15 @@ pipeline {
                 bat 'mvn clean'
             }
         }
-        stage('Deploy') {
+        stage('Install') {
             steps {
-                echo 'Deploying....'
+                bat 'mvn install'
             }
-        }
+        }   
+        stage('Package') {
+            steps {
+                bat 'mvn package'
+            }
+        }    
     }
 }
