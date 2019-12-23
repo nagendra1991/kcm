@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
                checkout scm
             }
         }
-        stage('Test') {
+        stage('Clean') {
             steps {
-                echo 'Testing..'
+                sh 'mvn clean'
             }
         }
         stage('Deploy') {
