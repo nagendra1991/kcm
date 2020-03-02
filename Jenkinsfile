@@ -6,4 +6,5 @@ pipeline {
                echo 'This is a minimal pipeline.'
             }
         }
+    }
     }
