@@ -1,24 +1,9 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Checkout') 
-			{
-            steps 	{
-               checkout scm
-					}
-			}
-        stage('Clean') 
-			{
-            steps 	{
-                sh 'mvn clean'
-					}
-			}
-        stage('Install') 
-			{
-            steps 	{
-                sh 'mvn install'
-					}
-			}       
-		}	
-			}
+pipeline { 
+    agent any  
+    stages { 
+        stage('Build') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
+            }
+        }
+    } 
