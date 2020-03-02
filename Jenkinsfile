@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Clean') {
             steps {
-                bat 'mvn clean'
+                sh 'mvn clean'
             }
         }
         stage('Install') {
             steps {
-                bat 'mvn install'
+                sh 'mvn install'
             }
         }   
         stage('Package') {
             steps {
-                bat 'mvn package'
+                sh 'mvn package'
             }
         }    
     }
