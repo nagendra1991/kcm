@@ -9,7 +9,7 @@ pipeline {
         }
         stage('clean') {
             steps {
-                 mvn clean
+                sh mvn clean
             }
         }
     }
