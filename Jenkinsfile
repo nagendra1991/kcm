@@ -9,7 +9,7 @@ pipeline {
         }
         stage('clean') {
             steps {
-                bat maven clean
+                 maven clean
             }
         }
     }
