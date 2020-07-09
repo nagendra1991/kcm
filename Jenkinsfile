@@ -7,10 +7,5 @@ pipeline {
                 checkout scm
             }
         }
-        stage('clean') {
-            steps {
-                sh mvn clean
-            }
-        }
     }
 }
