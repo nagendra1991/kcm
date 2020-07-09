@@ -7,5 +7,10 @@ pipeline {
                 checkout scm
             }
         }
-   }
+        stage('clean') {
+            steps {
+                sh maven clean
+            }
+        }
+    }
 }
