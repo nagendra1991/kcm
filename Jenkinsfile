@@ -1,21 +1,10 @@
 pipeline {
     agent any
-
     stages {
-        stage('Checkout') {
+        stage('Build') { 
             steps {
-                checkout scm
+                bat 'mvn -B -DskipTests clean package' 
             }
         }
-     stage('clean') {
-            steps {
-                bat 'mvn clean'
-            }
-        }
-     stage('install') {
-            steps {
-                bat 'mvn install'
-            }
-        }   
     }
 }
